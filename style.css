@@ -83,7 +83,7 @@ header > h1{
 
 .buttonN button{
     font-size: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 3px 5px;
     color: whitesmoke;
     background: none;
@@ -103,13 +103,13 @@ header > h1{
     
 }
 .inputTime input{
-    width: 100px;
+    width: 60px;
     height: 50px;
     margin: auto 10px;
     border: none;
     outline: none;
     background: none;
-    font-size: 40px;
+    font-size: 20px;
     border-bottom: 3px solid white;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -117,13 +117,13 @@ header > h1{
 }
 
 .inputTime input::placeholder{
-    font-size: 18px ;
+    font-size: 12px ;
 }
 
 .tombol button{
     font-size: 20px;
     margin: 5px 5px 0px 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 3px 5px;
     color: whitesmoke;
     background: none;
@@ -218,4 +218,108 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+
+@media(min-width : 768px){
+    .clock, .timer, .stopwatch{
+        width:400px;
+        height: 200px;
+    }
+
+    .clock > h2, .timer > h2, .stopwatch > h2{
+        font-size: 30px;
+    }
+
+    .inputTime input{
+        width: 70px;
+        height: 50px;
+        font-size: 25px;
+    }
+    
+    .inputTime input::placeholder{
+        font-size: 14px ;
+    }
+
+    .navbar{
+        width: 500px;
+        border-radius: 40px;
+    }
+    
+    .navigation{
+        padding: 10px;
+        
+    }
+    .navigation > li{
+        list-style-type: none;
+        padding: 10px;
+    }
+    
+    .navigation > li > a {
+        font-size: 30px;
+    
+    } 
+}
+
+@media(min-width : 1024px){
+    .clock, .timer, .stopwatch{
+        width:500px;
+        height: 300px;
+    }
+
+    .clock > h2, .timer > h2, .stopwatch > h2{
+        font-size: 40px;
+    }
+
+    .inputTime input{
+        width: 100px;
+        height: 50px;
+        font-size: 35px;
+
+    }
+    
+    .inputTime input::placeholder{
+        font-size: 20px ;
+    }
+
+    .tombol button{
+        font-size: 30px;
+        padding: 10px 10px;
+
+        
+    }
+
+    #current-time, #stopwatch-watch{
+        font-size: 60px;
+        margin: 15px 0 15px 0;
+    }
+
+    .buttonN button{
+        font-size: 30px;
+        border-radius: 15px;
+        padding: 10px 10px;
+    }
+
+    .navbar{
+        width: 800px;
+        border-radius: 50px;
+    }
+    .bungkus{
+        width: 700px;
+    }
+
+    .bungkus ul{
+        gap: 6rem;
+    }
+
+
+    .navigation > li{
+        list-style-type: none;
+        padding: 5px; 
+    }
+    
+    .navigation > li > a {
+        font-size: 35px;
+    
+    } 
 }
