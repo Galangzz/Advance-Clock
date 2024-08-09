@@ -53,46 +53,87 @@ header > h1{
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* border-color: rgb(7, 75, 191); */
+    
     backdrop-filter: blur(10px);
     border-style: hidden;
     border-radius: 25px ;
     box-shadow: 0px 2px 20px 1px;
     color: wheat;
     margin: auto;
-    height: 120px;
-    padding: 10px 25px 10px 25px;
+    /* height: 120px; */
+    padding: 25px 40px;
 }
 
 .clock > h2, .timer > h2, .stopwatch > h2{
-    /* margin-top: 5px; */
+    margin-top: 5px;
     color: white;
 }
 
-#current-time, #time-watch{
-    
-    font-size: 25px;
+#current-time, #stopwatch-watch{
+    font-size: 40px;
     margin-top: 10px;
     color: white;
-
 }
 
 .buttonN{
     display: flex;
     gap: 15px;
-    margin: 8px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
 }
 
-#button1, #button2, #button3{
+.buttonN button{
     font-size: 20px;
     border-radius: 5px;
     padding: 3px 5px;
     color: whitesmoke;
     background: none;
-    /* background-color: white; */
+    cursor: pointer;
     border: 2px solid grey;
     transition-duration: 0.4s;
 }
+
+
+
+.inputTime{
+    display: flex;
+    margin: auto;
+    padding: 20px 10px;
+    text-align: center;
+    justify-content: center;
+    
+}
+.inputTime input{
+    width: 100px;
+    height: 50px;
+    margin: auto 10px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 40px;
+    border-bottom: 3px solid white;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+}
+
+.inputTime input::placeholder{
+    font-size: 18px ;
+}
+
+.tombol button{
+    font-size: 20px;
+    margin: 5px 5px 0px 5px;
+    border-radius: 5px;
+    padding: 3px 5px;
+    color: whitesmoke;
+    background: none;
+    cursor: pointer;
+    border: 2px solid grey;
+    transition-duration: 0.4s;
+}
+
+
+
 
 .navbar{
     display: flex;
@@ -111,8 +152,6 @@ header > h1{
     display: flex;
     justify-content: center;
     padding: 10px;
-
-
 }
 
 .navigation{
@@ -163,4 +202,20 @@ header:hover{
 }
 #button3:hover{
     background-color: grey;
+}
+
+#tombol1:hover{
+    background-color: green;
+}
+#tombol2:hover{
+    background-color:red;
+}
+#tombol3:hover{
+    background-color: grey;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

@@ -32,9 +32,8 @@ jamSekarang();
 // });
 
 
-
-//TIMER
-const display = document.getElementById('time-watch');
+//Stopwatch
+const display = document.getElementById('stopwatch-watch');
 if(display){
     let timer = null;
     let startTime = 0;
@@ -84,4 +83,86 @@ if(display){
     
 }
 
-//stopwatch
+//Timer
+const hour = document.getElementById("hour");
+const minute = document.getElementById("minute");
+const second = document.getElementById("second");
+
+const mulai = document.getElementById("tombol1");
+const berhenti = document.getElementById("tombol2");
+const clear = document.getElementById("tombol3");
+
+if(hour && minute && second){
+    console.log("Ohayou");
+
+
+    var interval = null;
+    var total = 0;
+    var isRunning = false;
+
+    totalValue = ()=>{
+        total = Number(hour.value)*3600 + Number(minute.value)*60 + Number(second.value);
+    }
+
+    Timer = ()=>{
+        totalValue();
+        total --;
+
+        if (total >= 0){
+            var hr = Math.floor(total / 3600);
+            var mnt = Math.floor(total / 60 % 60);
+            var sec = Math.floor(total % 60);
+
+            hr = (hr < 10) ? "0" + hr : hr;
+            mnt = (mnt < 10) ? "0" + mnt : mnt;
+            sec = (sec < 10) ? "0" + sec : sec;
+
+            hour.value = hr;
+            minute.value = mnt;
+            second.value = sec;
+            
+        }
+        else{
+            alert("Time Over!!!");
+            clearInterval(interval);
+            hour.value = "";
+            minute.value = "";
+            second.value = "";
+        }
+    }
+
+    mulai.addEventListener('click', ()=>{
+        
+        if (!(hour.value || minute.value || second.value)){
+            alert("Please fill the time");
+
+        }else{
+            
+            if(!isRunning){
+                clearInterval(interval);
+                interval = setInterval(Timer, 1000);
+            }
+            isRunning = true;
+        }
+    });
+
+    berhenti.addEventListener('click', ()=>{
+        
+        if(isRunning){
+            clearInterval(interval);
+            isRunning = false;
+        }
+    });
+
+    clear.addEventListener('click', ()=>{
+        // alert("Hello2");
+        hour.value = "";
+        minute.value = "";
+        second.value = "";
+    });
+
+
+
+
+
+}
