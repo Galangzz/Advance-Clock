@@ -1,35 +1,32 @@
 //CLOCK
-// document.addEventListener('DOMContentLoaded', () => {
 var waktu = document.getElementById("current-time")
 
 if (waktu) {
     
     function jamSekarang(){
         var waktuSekarang = new Date()
-    var jam = waktuSekarang.getHours();
-    var menit = waktuSekarang.getMinutes();
-    var detik = waktuSekarang.getSeconds();
-    var formatWaktu ="AM";
-    
-    formatWaktu = (jam>=12)? "PM" : "AM";
-    
-    if(jam == 0){
-        jam = 12;
-    }else if(jam > 12){
-        jam -= 12;
-    }
-    
-    jam = (jam < 10) ? "0" + jam : jam;
-    menit= (menit < 10) ? "0" + menit : menit;
-    detik = (detik < 10) ? "0" + detik : detik;
-    
-    waktu.innerHTML = `${jam}:${menit}:${detik} ${formatWaktu}`;
-    
+        var jam = waktuSekarang.getHours();
+        var menit = waktuSekarang.getMinutes();
+        var detik = waktuSekarang.getSeconds();
+        var formatWaktu ="AM";
+        
+        formatWaktu = (jam>=12)? "PM" : "AM";
+        
+        if(jam == 0){
+            jam = 12;
+        }else if(jam > 12){
+            jam -= 12;
+        }
+        
+        jam = (jam < 10) ? "0" + jam : jam;
+        menit= (menit < 10) ? "0" + menit : menit;
+        detik = (detik < 10) ? "0" + detik : detik;
+        
+        waktu.innerHTML = `${jam}:${menit}:${detik} ${formatWaktu}`;
 };
-setInterval(jamSekarang, 1000);
-jamSekarang();
+    setInterval(jamSekarang, 1000);
+    jamSekarang();
 }
-// });
 
 
 //Stopwatch
@@ -61,7 +58,7 @@ if(display){
         startTime = 0;
         elapsedTime = 0;
         isRunning = false;
-        display.textContent = "00:00:00.00";
+        display.textContent = "00:00:00:00";
     }
     
     function update(){
@@ -83,19 +80,16 @@ if(display){
     
 }
 
+
 //Timer
 const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
 const second = document.getElementById("second");
-
 const mulai = document.getElementById("tombol1");
 const berhenti = document.getElementById("tombol2");
 const clear = document.getElementById("tombol3");
 
 if(hour && minute && second){
-    console.log("Ohayou");
-
-
     var interval = null;
     var total = 0;
     var isRunning = false;
@@ -128,6 +122,7 @@ if(hour && minute && second){
             hour.value = "";
             minute.value = "";
             second.value = "";
+            isRunning = false;
         }
     }
 
@@ -135,7 +130,6 @@ if(hour && minute && second){
         
         if (!(hour.value || minute.value || second.value)){
             alert("Please fill the time");
-
         }else{
             
             if(!isRunning){
@@ -155,14 +149,10 @@ if(hour && minute && second){
     });
 
     clear.addEventListener('click', ()=>{
-        // alert("Hello2");
+        clearInterval(interval);
+        isRunning = false;
         hour.value = "";
         minute.value = "";
         second.value = "";
     });
-
-
-
-
-
 }

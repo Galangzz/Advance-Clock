@@ -9,8 +9,6 @@ html,body{
     display: grid;
     height: 100%;
     width: 100%;
-    /* place-items: center; */
-    /* background: rgb(245, 0, 0); */
     background-image: url("urpath.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,17 +17,6 @@ html,body{
 }
 
 header{
-    /* background-color: rgb(33, 6, 141); */
-    /* border-style: solid; */
-    /* border-radius: 10%; */
-    /* margin: auto;
-    border-width: 10px;
-    padding: 15px 10px 15px 10px;
-    color: wheat;
-    box-shadow: 0px 0px 15px 0px;
-    border-radius: 15px;
-     */
-    
     display: flex;
     backdrop-filter: blur(20px);
     margin: auto;
@@ -42,7 +29,6 @@ header{
 }
 
 header > h1{
-    /* justify-content: center; */
     color: rgb(195, 195, 226);
     text-align: center;
 }
@@ -53,14 +39,12 @@ header > h1{
     justify-content: center;
     align-items: center;
     text-align: center;
-    
     backdrop-filter: blur(10px);
     border-style: hidden;
     border-radius: 25px ;
     box-shadow: 0px 2px 20px 1px;
     color: wheat;
     margin: auto;
-    /* height: 120px; */
     padding: 25px 40px;
 }
 
@@ -92,8 +76,6 @@ header > h1{
     transition-duration: 0.4s;
 }
 
-
-
 .inputTime{
     display: flex;
     margin: auto;
@@ -102,6 +84,7 @@ header > h1{
     justify-content: center;
     
 }
+
 .inputTime input{
     width: 60px;
     height: 50px;
@@ -132,15 +115,10 @@ header > h1{
     transition-duration: 0.4s;
 }
 
-
-
-
 .navbar{
     display: flex;
     justify-content: center;
     margin: auto;
-    /* height: 50px; */
-    /* background-color: rgb(26, 26, 120); */
     backdrop-filter: blur(10px);
     border-radius: 25px;
     color: rgb(209, 209, 235);
@@ -148,7 +126,6 @@ header > h1{
 }
 
 .bungkus{
-    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -160,9 +137,8 @@ header > h1{
     align-items: center;
     padding: 5px;
     margin: auto;
-    /* border-style: solid; */
-    
 }
+
 .navigation > li{
     list-style-type: none;
     padding: 10px;
@@ -175,31 +151,27 @@ header > h1{
     text-decoration: none;
     text-transform: capitalize;
     border-radius: 25px;
-
 } 
-
-
-
 
 .navigation > li > a:hover{
     color: rgb(204, 130, 236);
     box-shadow: 0px 2px 10px 4px;
-    /* text-decoration-line: underline; */
     transition: all 0.5s ease-in-out;
 }
 
 header:hover{
     color: aquamarine;
-    /* box-shadow: inset 0px 0px 25px #1479EA; */
     transition: all 0.5s ease-in-out;
 }
 
 #button1:hover{
     background-color: green;
 }
+
 #button2:hover{
     background-color:red;
 }
+
 #button3:hover{
     background-color: grey;
 }
@@ -207,9 +179,11 @@ header:hover{
 #tombol1:hover{
     background-color: green;
 }
+
 #tombol2:hover{
     background-color:red;
 }
+
 #tombol3:hover{
     background-color: grey;
 }
@@ -219,7 +193,6 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 
 @media(min-width : 768px){
     .clock, .timer, .stopwatch{
@@ -285,8 +258,6 @@ input::-webkit-inner-spin-button {
     .tombol button{
         font-size: 30px;
         padding: 10px 10px;
-
-        
     }
 
     #current-time, #stopwatch-watch{
