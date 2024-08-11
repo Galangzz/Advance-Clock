@@ -127,9 +127,16 @@ if(hour && minute && second){
     }
 
     mulai.addEventListener('click', ()=>{
-        
+        totalValue();
         if (!(hour.value || minute.value || second.value)){
             alert("Please fill the time");
+        }else if(total <= -1){
+            alert("Invalid Time")
+            clearInterval(interval);
+            hour.value = "";
+            minute.value = "";
+            second.value = "";
+            return;
         }else{
             
             if(!isRunning){
